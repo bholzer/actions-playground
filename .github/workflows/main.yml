@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Hello World
     env:
-      - MYVAR: "WORLD"
+      MYVAR: "WORLD"
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/action1
