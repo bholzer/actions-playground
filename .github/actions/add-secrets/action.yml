@@ -1,0 +1,5 @@
+name: 'Add Secrets'
+description: 'Test Secret Context'
+runs:
+  using: 'node16'
+  main: 'index.js'
