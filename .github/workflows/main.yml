@@ -8,5 +8,5 @@ jobs:
       MYVAR: "WORLD"
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/action1
+      - uses: ./.github/actions/action
       - run: echo ${{ env.OTHERVAR }}

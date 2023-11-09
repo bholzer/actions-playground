@@ -1,7 +1,0 @@
-name: Composite Action 1
-description: Tests env inheritance
-runs:
-  using: composite
-  steps:
-    - run: echo Hello ${{ env.MYVAR }}
-    - run: echo "OTHERVAR=testing" >> $GITHUB_ENV
