@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    name: Hello World
+    env:
+      - MYVAR: "WORLD"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/action1
+      - run: echo ${{ env.OTHERVAR }}
