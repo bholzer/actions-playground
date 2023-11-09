@@ -4,4 +4,6 @@ runs:
   using: composite
   steps:
     - run: echo Hello ${{ env.MYVAR }}
+      shell: bash
     - run: echo "OTHERVAR=testing" >> $GITHUB_ENV
+      shell: bash
