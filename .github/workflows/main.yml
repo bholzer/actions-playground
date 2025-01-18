@@ -4,13 +4,7 @@ jobs:
   hello_world:
     runs-on: ubuntu-latest
     name: Hello World
-    env:
-      MYVAR: "WORLD"
+    environment: "playground"
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/test-composite
-      - uses: ./.github/actions/add-secrets
-      - run: echo ${{ env.OTHERVAR }}
-      - run: echo ${{ env.EXPORTEDVAR }}
-      - run: echo ${{ env.EXPORTEDVAR }}
-      - run: echo ${{ secrets.EXPORTEDVAR }}
+      
