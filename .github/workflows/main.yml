@@ -1,5 +1,9 @@
-on: [push]
-
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name to print'
+        required: false
 jobs:
   hello_world:
     runs-on: ubuntu-latest
@@ -7,4 +11,6 @@ jobs:
     environment: "playground"
     steps:
       - uses: actions/checkout@v4
-      
+      - name: Run a script
+        run: |
+          echo "Hello, ${{ inputs.name || 'World' }}!"
